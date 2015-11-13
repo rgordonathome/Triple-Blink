@@ -14,6 +14,9 @@ void setup() {
   digitalWrite(yellowLED, LOW);
   digitalWrite(redLED, LOW);
 
+  // enable serial communication
+  Serial.begin(9600);
+
 }
 
 void loop() {
@@ -21,6 +24,7 @@ void loop() {
   // turn on green LED
   digitalWrite(greenLED, HIGH);
   // wait 1 second
+  Serial.println("Green on");
   delay(1000);
   // turn off green LED
   digitalWrite(greenLED, LOW);
@@ -28,15 +32,17 @@ void loop() {
   // turn on yellow LED
   digitalWrite(yellowLED, HIGH);
   // wait 1 second
+  Serial.println("Yellow on");
   delay(1000);
   // turn off yellow LED
   digitalWrite(yellowLED, LOW);
 
-  // turn on green LED
+  // turn on red LED
   digitalWrite(redLED, HIGH);
   // wait 1 second
+  Serial.println("Red on");
   delay(1000);
-  // turn off green LED
+  // turn off red LED
   digitalWrite(redLED, LOW);
 
 }
